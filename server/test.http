@@ -1,0 +1,139 @@
+// TEACHER
+###
+GET https://teacher-classroom-attendance.herokuapp.com/api/teacher/records
+###
+GET http://localhost:3005/api/teacher/names
+###
+POST  http://localhost:3005/api/teacher/login
+Content-Type: application/json
+
+{
+    "UserName": "john",
+    "Password": "password"
+}
+###
+POST http://localhost:3005/api/teacher/registration
+Content-Type: application/json
+
+{
+    "Name": "Abdul Lintongan",
+    "IdNumber": "E77552",
+    "BirthDate": "1887-05-22",
+    "Department": "BSIT",
+    "UserName": "abdul",
+    "Password": "password"
+}
+###
+PUT  http://localhost:3005/api/teacher/update/zQdtol80B
+Content-Type: application/json
+
+{
+    "name": "Jenny Doe test",
+    "idNumber": "E0091911",
+    "birthDate": "1992-03-09",
+    "department": "HRDM"
+}
+###
+PUT  http://localhost:3005/api/teacher/account/update/yMoLONFx2
+Content-Type: application/json
+
+{
+    "userName": "riannel",
+    "password": "testing"
+}
+###
+PUT  http://localhost:3005/api/teacher/delete/mkxrbRqiU
+
+
+// SCAN
+###
+POST http://localhost:3005/api/scan/classroom
+Content-Type: application/json
+
+{
+    "classId":"",
+    "teacher": "Neljohn Cerera",
+    "idNumber": "E88992",
+    "classRoom": "TECH LAB",
+    "subject": "CAP102",
+    "subjectTime": "8:00-9:00 PM",
+    "status": "IN",
+    "remarks": "Present"
+}
+
+
+// CLASS
+###
+GET http://localhost:3005/api/class/records
+###
+GET http://localhost:3005/api/class/teacher/E1234
+
+###
+POST http://localhost:3005/api/class/registration
+Content-Type: application/json
+
+{
+    "classRoom": "IT LAB",
+    "teacher": "Cheribel Costelo",
+    "idNumber" : "E8872",
+    "subject": "NET101",
+    "subjectTime": "8:00-9:00 PM",
+    "schedule": "Mon,Tues,Wed,Thur,Fri,Sat"
+}
+
+
+// ATTENDANCE
+###
+GET http://localhost:3005/api/attendance/records/classroom
+### Today classroom attendance records
+GET http://localhost:3005/api/attendance/records/classroom/today
+###
+GET   http://localhost:3005/api/attendance/teacher/records/classroom/Enrique Torres/E99292
+
+###
+PUT  http://localhost:3005/api/attendance/forgot-logout
+Content-Type: application/json
+
+{
+    "classId": "vhexhe4_P"
+}
+### s
+POST  http://localhost:3005/api/attendance/teacher-absent
+Content-Type: application/json
+
+{
+    "teacher": "Neljohn Rentillo Cerera",
+    "idNumber" : "E3333",
+    "classRoom": "TECH LAB",
+    "subject": "NET 101",
+    "subjectTime": "7:00-8:00 PM"
+}
+
+
+// LOGS
+###
+GET https://classroom-attendance-server-1.herokuapp.com/api/logs/E99020
+
+
+// SETTINGS
+###
+POST  http://localhost:3005/api/settings/update
+Content-Type: application/json
+
+{
+    "semester": "2nd Semester",
+    "term": "1st Term",
+    "year": "2021"
+}
+###
+GET http://localhost:3005/api/settings/records
+
+
+// ROOMS
+###
+GET http://localhost:3005/api/rooms/records
+
+
+// SUBJECTS
+###
+GET http://localhost:3005/api/subjects/records

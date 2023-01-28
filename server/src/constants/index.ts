@@ -1,0 +1,6 @@
+const PORT = process.env.PORT || 3005;
+const KEYFILE = process.env.KEYFILE;
+const SPREADSHEET_SCOPE = process.env.SPREADSHEET_SCOPE;
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
+
+export { PORT, KEYFILE, SPREADSHEET_SCOPE, SPREADSHEET_ID };
